@@ -1,0 +1,12 @@
+<div class="card" [ngStyle]="style()">
+  <button class="delButton" *ngIf="hasRoute('/dish-manager')" (click)="deleteDish()">X</button>
+  <app-dish-image [dish]="dish"></app-dish-image>
+  <app-dish-description [dish]="dish"></app-dish-description>
+  <div class="rest">
+    <a routerLink="{{dish.key}}" *ngIf="!user.roles.includes('guest')">Szczegóły</a>
+    <app-dish-order-card [dish]="dish" *ngIf="!user.roles.includes('guest')"></app-dish-order-card>
+  </div>
+  <div class="edit">
+    <a routerLink="edit/{{dish.key}}" *ngIf="hasRoute('/dish-manager')">Edit this dish</a>
+  </div>
+</div>

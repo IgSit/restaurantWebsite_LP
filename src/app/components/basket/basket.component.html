@@ -1,0 +1,23 @@
+<div *ngFor="let elem of basket | keyvalue">
+  <div class="container" *ngIf="elem.value > 0">
+    <app-dish-image [dish]="toDish(elem.key)" [inBasket]="true"></app-dish-image>
+    <div class="info">
+      <p>Produkt: {{elem.key}}</p>
+      <p> Ilość: {{elem.value}}</p>
+      <p *ngIf="currencyChangerService.currency == 'dollar'">
+        Cena: {{toDish(elem.key).price * elem.value | currency : 'USD'}}
+        ({{toDish(elem.key).price | currency : 'USD'}} szt.)
+      </p>
+      <p *ngIf="currencyChangerService.currency == 'euro'">
+        Cena: {{toDish(elem.key).price * 4 / 3 * elem.value | currency : 'EUR'}}
+        ({{toDish(elem.key).price * 4 / 3| currency : 'EUR'}} szt.)
+      </p>
+    </div>
+    <app-dish-order-card [dish]="toDish(elem.key)" [inBasket]="elem.value"></app-dish-order-card>
+  </div>
+</div>
+<div class="buy">
+  <p *ngIf="currencyChangerService.currency == 'dollar'">Łączna wartość koszyka: {{basketValue | currency: 'USD'}}</p>
+  <p *ngIf="currencyChangerService.currency == 'euro'">Łączna wartość koszyka: {{basketValue * 4 / 3 | currency: 'EUR'}}</p>
+  <button (click)="buy()">{{'Zamów' | uppercase}}</button>
+</div>

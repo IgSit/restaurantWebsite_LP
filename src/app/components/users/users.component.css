@@ -1,0 +1,49 @@
+.persistence {
+  padding: 15px;
+  background-color: #cccccc;
+  border: 2px solid #a2a2a2;
+  border-radius: 4px;
+  font-family: "Century Gothic", serif;
+  color: #252424;
+  margin: 10px auto;
+  width: fit-content;
+}
+.users {
+  margin: 10px auto;
+  background-color: #d5cccc;
+  border: 2px solid darkgray;
+  border-radius: 4px;
+  padding: 20px;
+  font-family: "Century Gothic", serif;
+  color: #252424;
+  width: fit-content;
+}
+.user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #e5e5e5;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 60vw;
+}
+button, .ban, .but {
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  margin: 5px;
+}
+button:hover {
+  background-color: #969696;
+}
+button:checked:hover {
+  background-color: #226bb0;
+}
+.ban:hover {
+  background-color: #064886;
+}
+.ban:checked:hover {
+  background-color: #bb1f1f;
+}

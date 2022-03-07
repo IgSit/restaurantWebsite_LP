@@ -1,27 +1,69 @@
-# Restaurant
+# Strona restauracji
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+## Prospekt
+Projekt powstał w ramach przedmiotu Wprowadzenie do Aplikacji Internetowych na 
+kierunku Informatyka AGH.
+Jego celem było stworzenie strony internetowej restauracji z możliwością zakupów online oraz
+innych zaimplementowanie jej podstawowych funkcjonalności (rejestracja i logowanie, 
+ocenianie dań, zostawianie komentarzy). Oprócz tego należało stworzyć funkcjonalności 
+zarządzania stroną oraz ofertą restauracji dla admina i managerów strony - dodawanie 
+oraz usuwanie dań, banowanie czy też zmiana ról zarejestrowanych użytkowników.
 
-## Development server
+Projekt wykonano przy pomocy Angulara, natomiast backendem restauracji jest Google Firestore.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<span style = "color: red">***UWAGA!*** _Z plików **environment.ts** oraz **environment.prod.ts**
+ze względów bezpieczeństwa usunięto konfigurację Firebase'a ze względu na obecność
+prywatnych kluczy. W związku z tym strona nie posiada zawartości, w przypadku
+chęci wykorzystania projektu należy samodzielnie postawić bazę w Firestorze i do w/w plików
+ustawić własny firebaseConfig._ </span>
 
-## Code scaffolding
+## Funkcjonalności
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Strona główna
+Na stronie głównej znajduje się mapa Google z lokalizacją oraz linki do mediów społecznościowych.
 
-## Build
+<div align="center"> <img style="max-width: 800px" src="media/home.png" alt="home"></div>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Filtrowanie
+W sekcji menu pokazane są karty dań, które możemy też sortować według kuchni, kategorii oraz ceny.
+Mamy również do wyboru dwie waluty, w których pokazują się ceny. Zakres filtrowanych cech 
+reaguje na zmianę filtrów oraz waluty, co przedstawiono poniżej.
 
-## Running unit tests
+<div align="center"> <img style="max-width: 800px" src="media/filtruj.gif" alt="home"></div>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Ocena dań
 
-## Running end-to-end tests
+Jeśli jesteśmy klientem, który zakupił dane danie, mamy jednokrotną możliwość dodania
+oceny w postaci gwiazdek oraz wystawienia komentarza. Po dodaniu opinii nie ma już możliwości
+dodania kolejnej, to samo dotyczy się wystawienia gwiazdek. Dopóki nie zamówimy dania, te funkcjonalności
+są niedostępne.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<div align="center"> <img style="max-width: 800px" src="media/ocen.gif" alt="home"></div>
 
-## Further help
+Na powyższej animacji możemy zauważyć, że zakup dań polega po prostu na kliknięciu jednego przycisku - 
+nie implementowano przenoszenia do strony z płatnościami online, a więc i nie istnieją
+statusy zamówienia (nowe, opłacone, realizowane), tylko po kliknięciu zamówienie widnieje od razu w historii
+zrealizowanych (na potrzeby ocen pamiętamy, kto kupił jakie dania).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Edycja menu
+
+Jako manager lub administrator strony mamy możliwość edycji pozycji w menu, jak i dodania nowych dań.
+Po zalogowaniu się kontem z odpowiednimi uprawnieniami do edycji w nagłówku pojawia się sekcja Menu Manager.
+Przy każdym daniu możemy je usunąć lub edytować, mamy też guziki do filtrowania i dodania nowego dania poprzez
+formularz z wymaganymi polami.
+
+<div align="center"> <img style="max-width: 800px" src="media/edytuj.gif" alt="home"></div>
+
+#### Użytkownicy
+
+Jako administrator strony mamy dostęp do specjalnego panelu (ikona klawiatury w nagłówku), który
+pozwala zmieniać rolę użytkowników oraz ich banować (ban polega na zablokowaniu możliwości oceny dań).
+W tym samym panelu mamy też możliwość zmiany trybu persystencji dla wszystkich użytkowników.
+
+<div align="center"> <img style="max-width: 800px" src="media/users.png" alt="home"></div>
+
+#### Inne informacje
+
+- Zabezpieczono dostęp do ścieżek dla użytkowników bez uprawnień (guardy)
+- Strona jest responsywna
+- Wszystkie wykonywane operacje są przekazywane do bazy danych

@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+}
+input[type="text"], textarea {
+  background-color : #811d1d;
+  border: 1px solid #500000;
+  color: wheat;
+  font-family: "Century Gothic", serif;
+}
+@media (max-width: 385px) {
+  .container {
+    display: block;
+  }
+}
+.column:first-of-type {
+  margin-right: 20px;
+}
+h4 {
+  margin: 0 auto 5px;
+  width: fit-content;
+  color: wheat;
+}
+form, label, input {
+  display: block;
+  width: fit-content;
+}
+form {
+  background-image: linear-gradient(
+    180deg,
+    rgba(119, 83, 83, 0.6) 0%,
+    rgba(99, 70, 70, 0.6) 100%
+  ),
+  url('https://media.istockphoto.com/photos/two-meat-plate-with-salad-leaves-and-summer-salad-in-waiters-hand-picture-id1160577908?b=1&k=20&m=1160577908&s=170667a&w=0&h=jGZUAWEVLqm-OtmAQRmGAfsyiwhcUBK6asX7_6qJffY=');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  border: 2px solid #492a2a;
+  border-radius: 4px;
+  color: #252424;
+  margin: 10px auto;
+}
+label {
+  margin-bottom: 2px;
+  color: #ffe3b4;
+}
+input {
+  margin-bottom: 5px;
+  width: 177px;
+}
+.sub {
+  width: fit-content;
+  margin: 5px auto;
+}
+.sub button {
+  background: rgb(85,117,255);
+  background: radial-gradient(circle, rgba(85,117,255,1) 0%, rgba(16,68,149,1) 100%);
+  padding: 4px 10px;
+  border: 2px solid #23236c;
+  border-radius: 4px;
+}
+p {
+  font-size: 12px;
+  color: #e5c3c3;
+  margin: 0 5px;
+  font-style: italic;
+}
+.c {
+  width: fit-content;
+  margin: 0 auto;
+}

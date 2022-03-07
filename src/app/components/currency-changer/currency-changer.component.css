@@ -1,0 +1,14 @@
+.container {
+  margin: 10px;
+}
+label {
+  background-color: #eab946;
+  padding: 8px;
+}
+#euro:checked ~ #euroLabel, #dollar:checked ~ #dollarLabel {
+  background-color: #c48309;
+  transition: 0.2s;
+}
+input {
+  display: none;
+}

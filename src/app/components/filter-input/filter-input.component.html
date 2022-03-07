@@ -1,0 +1,29 @@
+<div class="filter-container">
+  <form>
+    <div class="filter-section">
+      <h2>Kuchnia</h2>
+      <button *ngFor="let cuisine of filterService.getAllCuisines()"
+              (click)="cuisineSwitch(cuisine)"
+              [ngStyle]="{'background-color': filterService.cuisines.includes(cuisine) ? '#54B0FFFF' : null ,
+                          'border' : filterService.cuisines.includes(cuisine) ? '2px solid #3ba0e3' : null }"
+              type="button">
+        {{cuisine}}
+      </button>
+    </div>
+    <div class="filter-section">
+      <h2>Kategoria</h2>
+      <button *ngFor="let category of filterService.getAllCategories()"
+              (click)="categorySwitch(category)"
+              [ngStyle]="{'background-color': filterService.categories.includes(category) ? '#54B0FFFF' : null ,
+                          'border' : filterService.categories.includes(category) ? '2px solid #3ba0e3' : null}"
+              type="button">
+        {{category}}
+      </button>
+    </div>
+    <div class="filter-section">
+      <ngx-slider [(value)]="filterService.minPrice" [(highValue)]="filterService.maxPrice"
+                  [options]="options">
+      </ngx-slider>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+form {
+  background-color: #ececec;
+  padding: 25px;
+  border: 2px solid #a8a8a8;
+  border-radius: 4px;
+  color: #252424;
+  margin: 10px auto;
+}
+p {
+  font-size: 12px;
+  color: red;
+  margin: 0 5px;
+  font-style: italic;
+}
+label {
+  margin-bottom: 2px;
+}
+input {
+  margin-bottom: 5px;
+}
+form, label, input {
+  display: block;
+  width: fit-content;
+}
+.but {
+  margin: 10px auto;
+  width: fit-content;
+}

@@ -1,0 +1,14 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+  <label>Temat:</label>
+  <p *ngIf="formErrors.get('name')"> {{formErrors.get('name')}}</p>
+  <input name="name" formControlName="name">
+
+  <label>Opinia:</label>
+  <p *ngIf="formErrors.get('body')"> {{formErrors.get('body')}}</p>
+  <textarea name="body" formControlName="body" cols="20" rows="6"></textarea>
+
+  <label>Data:</label>
+  <p *ngIf="formErrors.get('date')"> {{formErrors.get('date')}}</p>
+  <input name="date" formControlName="date">
+  <div class="but"><button type="submit">Dodaj</button></div>
+</form>

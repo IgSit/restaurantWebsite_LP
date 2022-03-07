@@ -1,0 +1,11 @@
+.body {
+  background-image: linear-gradient(
+    180deg,
+    rgba(239, 204, 127, 0) 0%,
+    rgba(246, 222, 140, 0) 100%
+  ),
+  url('https://wallpaperaccess.com/full/373984.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

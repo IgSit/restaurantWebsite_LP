@@ -1,0 +1,292 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "bigos",
+      "cuisine": [
+        "polska"
+      ],
+      "category": [
+        "obiad",
+        "mięsne"
+      ],
+      "ingredients": [
+        "kapusta",
+        "dziczyzna",
+        "kiełbasa"
+      ],
+      "maxPerDay": 3,
+      "price": 15.5,
+      "description": "Typowe polskie danie na bazie kapusty i kapusty",
+      "photoURLs": [
+        "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/zdjecie_glowne/public/bigos_z_kiszonej_kapusty.jpg?itok=256V_32p"
+      ],
+      "rate": 3.57,
+      "reviews": [
+        {
+          "nick": "Greg",
+          "name": "Nie polecam",
+          "body": "Okropne, zimne i mdłe",
+          "date": "2007-11-11"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "pizza Capriciosa",
+      "cuisine": [
+        "międzynarodowa",
+        "włoska"
+      ],
+      "category": [
+        "obiad",
+        "mięsne",
+        "pizza"
+      ],
+      "ingredients": [
+        "mozzarella",
+        "prosciutto crudo",
+        "pieczarki"
+      ],
+      "maxPerDay": 6,
+      "price": 16.5,
+      "description": "Tradycyjna włoska pizza z szynką i pieczarkami",
+      "photoURLs": [
+        "https://www.przyslijprzepis.pl/media/cache/big/uploads/media/recipe/0005/93/4c7a0b58db905fccf6d6a352543a11f0fb1517f3.jpeg",
+        "https://www.przyslijprzepis.pl/media/cache/big/uploads/media/recipe/0005/93/4c7a0b58db905fccf6d6a352543a11f0fb1517f3.jpeg"
+      ],
+      "rate": 3.5
+    },
+    {
+      "id": 3,
+      "name": "pizza Margarita",
+      "cuisine": [
+        "włoska",
+        "międzynarodowa"
+      ],
+      "category": [
+        "pizza"
+      ],
+      "ingredients": [
+        "mozarella",
+        "sos pomidorowy"
+      ],
+      "maxPerDay": 0,
+      "price": 23.5,
+      "description": "Pizza, co nikt jej nie zamawia, bo tam nic nie ma",
+      "photoURLs": [
+        "https://ocdn.eu/images/pulscms/MmE7MDA_/06d3b49c0634ba5de867c761bb0cdaf4.jpeg",
+        "https://ocdn.eu/images/pulscms/MmE7MDA_/06d3b49c0634ba5de867c761bb0cdaf4.jpeg",
+        "https://ocdn.eu/images/pulscms/MmE7MDA_/06d3b49c0634ba5de867c761bb0cdaf4.jpeg"
+      ],
+      "rate": 4
+    },
+    {
+      "id": 4,
+      "name": "sernik",
+      "cuisine": [
+        "międzynarodowa"
+      ],
+      "category": [
+        "deser"
+      ],
+      "ingredients": [
+        "twaróg",
+        "biszkopt"
+      ],
+      "maxPerDay": 84,
+      "price": 23.5,
+      "description": "Pyszny sernik - obiecujemy, nie ma w nim rodzynek",
+      "photoURLs": [
+        "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/sernik_wiedenski_00.jpg"
+      ],
+      "rate": 0
+    },
+    {
+      "id": 5,
+      "name": "Irish coffee",
+      "cuisine": [
+        "międzynarodowa",
+        "irlandzka"
+      ],
+      "category": [
+        "alkohole",
+        "napój"
+      ],
+      "ingredients": [
+        "kawa",
+        "mleko",
+        "whisky"
+      ],
+      "maxPerDay": 151,
+      "price": 11,
+      "description": "Kiedy jest 10:00 i nie wypada zamówić po prostu whisky",
+      "photoURLs": [
+        "https://images.absolutdrinks.com/drink-images/Raw/Absolut/dde5b617-048f-4af0-8c7f-0b2818407acb.jpg?imwidth=500"
+      ],
+      "rate": 2.83
+    },
+    {
+      "id": 6,
+      "name": "Green tea",
+      "cuisine": [
+        "międzynarodowa"
+      ],
+      "category": [
+        "napój"
+      ],
+      "ingredients": [
+        "jakieś śmieszne ziółka"
+      ],
+      "maxPerDay": 253,
+      "price": 9,
+      "description": "Niby zwykła herbata, ale jednak nie",
+      "photoURLs": [
+        "https://www.news-medical.net/image.axd?picture=2021%2F11%2Fshutterstock_251566309.jpg"
+      ],
+      "rate": 4.5
+    },
+    {
+      "id": 7,
+      "name": "Rosół",
+      "cuisine": [
+        "międzynarodowa",
+        "polska"
+      ],
+      "category": [
+        "obiad",
+        "przystawka"
+      ],
+      "ingredients": [
+        "makaron",
+        "no nie napiszemy, że jest zrobiony z kostki rosołowej"
+      ],
+      "maxPerDay": 33,
+      "price": 16,
+      "description": "I na przeziębienie, i na kaca",
+      "photoURLs": [
+        "https://ocdn.eu/pulscms-transforms/1/wbzk9kpTURBXy85MDI1NjNmMTljNzFmYTI2ZGE4Y2E4MzA1YjZjZThkNS5qcGeTlQMAJ80E5s0CwZMJpjc5OWM3MwaTBc0EsM0CdoGhMAE/rosol.jpg"
+      ],
+      "rate": 3.5
+    },
+    {
+      "id": 8,
+      "name": "Pomidorowa",
+      "cuisine": [
+        "międzynarodowa",
+        "polska"
+      ],
+      "category": [
+        "obiad",
+        "przystawka"
+      ],
+      "ingredients": [
+        "makaron",
+        "passata pomidorowa"
+      ],
+      "maxPerDay": 43,
+      "price": 16,
+      "description": "W poniedziałki mamy na nią rabat",
+      "photoURLs": [
+        "https://www.mniammniam.com/obrazki_mobile/zupa_pomidorowa_mobile.jpg"
+      ],
+      "rate": 3.33
+    },
+    {
+      "id": 9,
+      "name": "Pierogi ruskie",
+      "cuisine": [
+        "międzynarodowa",
+        "polska"
+      ],
+      "category": [
+        "obiad",
+        "vege"
+      ],
+      "ingredients": [
+        "ser",
+        "ziemniaki",
+        "cebula"
+      ],
+      "maxPerDay": 23,
+      "price": 19.7,
+      "description": "Niby ruskie, a jednak polskie",
+      "photoURLs": [
+        "https://akademiasmaku.pl/upload/recipes/4370/big/tradycyjne-pierogi-ruskie-4370.jpg"
+      ],
+      "rate": 3.67
+    },
+    {
+      "id": 10,
+      "name": "Pierogi z kapustą i grzybami",
+      "cuisine": [
+        "międzynarodowa",
+        "polska"
+      ],
+      "category": [
+        "obiad",
+        "vege"
+      ],
+      "ingredients": [
+        "kapusta",
+        "podgrzybki",
+        "prawdziwki"
+      ],
+      "maxPerDay": 23,
+      "price": 25.7,
+      "description": "Tradycyjne pierogi na każdej prawdziwie polskiej wigilii",
+      "photoURLs": [
+        "https://static.gotujmy.pl/ZDJECIE_PRZEPISU_ETAP/pierogi-z-kapusta-i-grzybami-235395.jpg"
+      ],
+      "rate": 4.33
+    },
+    {
+      "id": 11,
+      "name": "Kurczak z ryżem",
+      "cuisine": [
+        "międzynarodowa",
+        "studencka"
+      ],
+      "category": [
+        "obiad",
+        "mięsne"
+      ],
+      "ingredients": [
+        "ryż",
+        "kurczak",
+        "talerz"
+      ],
+      "maxPerDay": 53,
+      "price": 15.7,
+      "description": "Płacisz tylko za mięso - ryż funduje rząd",
+      "photoURLs": [
+        "https://gfx.stylzycia.radiozet.pl/var/chillizet/storage/images/styl-zycia/kuchnia/kurczak-curry-z-ryzem-sprawdzony-przepis-24135/4411985-1-pol-PL/Kurczak-curry-z-ryzem-idealne-danie-na-obiad.-Wyprobuj-nasz-przepis_article.jpg"
+      ],
+      "rate": 2.5
+    },
+    {
+      "id": 12,
+      "name": "Ryż z kurczakiem",
+      "cuisine": [
+        "międzynarodowa",
+        "studencka"
+      ],
+      "category": [
+        "obiad",
+        "vege"
+      ],
+      "ingredients": [
+        "ryż",
+        "kurczak (mało)",
+        "talerz"
+      ],
+      "maxPerDay": 93,
+      "price": 12.5,
+      "description": "Na obiad pod koniec miesiąca",
+      "photoURLs": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw5j2Cncbjr6y0Q6ji9B8Y5l8HgDKBCWeHxQ&usqp=CAU"
+      ],
+      "rate": 4.75
+    }
+  ]
+}

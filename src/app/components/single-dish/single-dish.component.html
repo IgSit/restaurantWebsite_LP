@@ -1,0 +1,37 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+  <div class="images">
+    <img *ngFor="let url of dish.photoURLs.slice(0, 3)" [src]="url" [ngStyle]="style()" alt="photo">
+  </div>
+  <div class="info">
+    <app-dish-description [dish]="dish"></app-dish-description>
+    <div class="clickers">
+      <app-dish-order-card [dish]="dish" [inBasket]="inBasket"></app-dish-order-card>
+      <app-dish-rating [dish]="dish" (onAddRating)="block()" [canRate]="canRate()"></app-dish-rating>
+    </div>
+  </div>
+  <a routerLink="/menu">Powrót</a>
+</div>
+<div class="reviews">
+  <div *ngIf="(!user.roles.includes('guest') && !user.banned && orderedDish() && !addedReview())">
+    <h3>Dodaj swoją opinię</h3>
+    <app-add-dish-review (addReviewEmitter)="addReview($event)" [user]="user"></app-add-dish-review>
+  </div>
+  <div class="communicate" *ngIf="user.roles.includes('guest')">
+    <h3><i class="fa fa-exclamation-triangle"></i> Aby dodać opinię, musisz się zalogować.</h3>
+  </div>
+  <div class="communicate" *ngIf="(!orderedDish() && !user.roles.includes('guest'))">
+    <h3><i class="fa fa-exclamation-triangle"></i>     Nie możesz dodać opinii do dania, którego nie zamówiłeś.</h3>
+  </div>
+  <div class="communicate" *ngIf="(orderedDish() && addedReview() && !user.roles.includes('guest'))">
+    <h3><i class="fa fa-exclamation-triangle"></i>Oceniłeś już to danie. Nie możesz dodać kolejnej opinii.</h3>
+  </div>
+  <h3> Opinie</h3>
+  <app-dish-review *ngFor="let review of dish.reviews" [rate]="review"></app-dish-review>
+  <div *ngIf="dish.reviews.length == 0" class="no-reviews">
+    Nie ma żadnych opinii
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="info">
+  <button (click)="toggleAdd()" [ngStyle]="style(showAdd)">
+    <p *ngIf="!showAdd">Dodaj nowe danie</p><p *ngIf="showAdd">Ukryj formularz</p>
+  </button>
+  <button (click)="toggleFilter()" [ngStyle]="style(showFilter)">
+    <p *ngIf="!showFilter">Pokaż filtry</p><p *ngIf="showFilter">Ukryj filtry</p>
+  </button>
+</div>
+<app-add-dish *ngIf="showAdd"></app-add-dish>
+<app-dishes [showFilter]="showFilter"></app-dishes>

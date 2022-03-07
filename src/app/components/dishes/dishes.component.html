@@ -1,0 +1,53 @@
+<div class="filter-container" *ngIf="hasRoute('/menu')">
+  <button class="filter" (click)="toggleFilter()" [ngStyle]="style(showFilter)">
+    <p *ngIf="!showFilter">Pokaż filtry</p><p *ngIf="showFilter">Ukryj filtry</p>
+  </button>
+</div>
+<app-filter-input *ngIf="showFilter" (filteredLengthEmitter)="updateMenuLength($event)"></app-filter-input>
+<div>
+  <div *ngIf="dishes.length > 0; then dishesDiv; else noDishesDiv"></div>
+  <ng-template #dishesDiv>
+    <div class="body">
+      <div class="container"
+           *ngFor="let dish of dishes | filter :
+                        filterService.cuisines : filterService.categories :
+                        filterService.maxPrice : filterService.minPrice :
+                        currencyChangerService.currency :
+                        filterService.maxRate  :filterService.minRate
+
+                      let i = index">
+        <app-dish
+          *ngIf="onCurrentPage(i)"
+          [dish]="dish"
+          (deleteDishEmitter)="deleteDish($event)"
+          [hasMaxPrice] = hasMaxPrice(dish)
+          [hasMinPrice] = hasMinPrice(dish)
+        ></app-dish>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #noDishesDiv>
+    <div class="empty">Nie ma obecnie żadnych dań</div>
+  </ng-template>
+  <div class="paginator">
+    <div>
+      <button (click)="previousPage()" [disabled]="currentPage == 1"><fa-icon [icon]="faChevronLeft"></fa-icon> </button>
+      <div class="pageIndex"> {{currentPage}}</div>
+      <button (click)="nextPage()" [disabled]="currentPage >= menuLength / pageSize"><fa-icon [icon]="faChevronRight"></fa-icon> </button>
+    </div>
+    <div class="pageSizer">
+      <label for="pageSize"><p>Ilość dań na stronie: </p></label>
+      <select (change)="changePageSize()"
+              name="pageSize"
+              id="pageSize"
+              [(ngModel)]="pageSize">
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="12">12</option>
+        <option value="36">36</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,47 @@
+
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+  <h4>Add new dish</h4>
+  <p class="c">Wartości tablicowe </p>
+  <p class="c">(np. kategorie, kuchnie, linki) </p>
+  <p class="c">wpisywać po przecinku bez spacji</p>
+  <div class="container">
+    <div class="column">
+      <label>Dish name:</label>
+      <p *ngIf="formErrors.get('name')"> {{formErrors.get('name')}}</p>
+      <textarea rows="1" name="name" formControlName="name"></textarea>
+
+      <label>Cuisine:</label>
+      <p *ngIf="formErrors.get('cuisine')"> {{formErrors.get('cuisine')}}</p>
+      <textarea rows="2" cols="20" name="cuisine" formControlName="cuisine"></textarea>
+
+      <label>Category:</label>
+      <p *ngIf="formErrors.get('category')"> {{formErrors.get('category')}}</p>
+      <textarea rows="2" cols="20" name="category" formControlName="category" ></textarea>
+
+      <label>Ingredients:</label>
+      <p *ngIf="formErrors.get('ingredients')"> {{formErrors.get('ingredients')}}</p>
+      <textarea rows="2" cols="20" name="ingredients" formControlName="ingredients"></textarea>
+      </div>
+
+      <div class="column">
+
+      <label>Max amount per day:</label>
+      <p *ngIf="formErrors.get('maxPerDay')"> {{formErrors.get('maxPerDay')}}</p>
+        <textarea rows="1" name="maxPerDay" formControlName="maxPerDay"></textarea>
+
+      <label>Price:</label>
+      <p *ngIf="formErrors.get('price')"> {{formErrors.get('price')}}</p>
+        <textarea rows="1" name="price" formControlName="price"></textarea>
+
+      <label>Description:</label>
+      <p *ngIf="formErrors.get('description')"> {{formErrors.get('description')}}</p>
+        <textarea rows="5" cols="20" name="description" formControlName="description"></textarea>
+
+      <label>URLs to photos:</label>
+      <p *ngIf="formErrors.get('photoURLs')"> {{formErrors.get('photoURLs')}}</p>
+      <textarea rows="2" cols="20" name="photoURLs" formControlName="photoURLs"></textarea>
+    </div>
+  </div>
+
+  <div class="sub"><button type="submit">Add</button></div>
+</form>

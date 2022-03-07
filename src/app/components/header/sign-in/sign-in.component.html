@@ -1,0 +1,17 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+  <label>Email:</label>
+  <p *ngIf="formErrors.get('email')"> {{formErrors.get('email')}}</p>
+  <input name="email" formControlName="email">
+
+  <label>Password:</label>
+  <p *ngIf="formErrors.get('password')"> {{formErrors.get('password')}}</p>
+  <input name="password" formControlName="password">
+
+  <div class="but">
+    <button type="submit">Log in</button>
+    <p *ngIf="showError">Oops! {{error}}</p>
+    <br>
+    <a routerLink="/sign-up">Create new account</a>
+  </div>
+
+</form>

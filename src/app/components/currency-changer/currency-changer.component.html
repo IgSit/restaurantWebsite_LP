@@ -1,0 +1,6 @@
+<div class="container">
+  <input [(ngModel)]="currencyChangerService.currency" id="dollar" type="radio" value="dollar" name="currency" checked (click)="toDollar()">
+  <label for="dollar" id="dollarLabel">$</label>
+  <input [(ngModel)]="currencyChangerService.currency" id="euro" type="radio" value="euro" name="currency" (click)="toEuro()">
+  <label for="euro" id="euroLabel">€</label>
+</div>

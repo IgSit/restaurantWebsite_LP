@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nick {
+  font-style: italic;
+  font-size: 12px;
+  font-family: "Britannic Bold", serif;
+  color: #696262;
+}
+.body {
+  font-family: "Century Gothic", serif;
+  color: #252424;
+  font-size: 16px;
+}
+.review {
+  background-color: #d3d0d0;
+  border: 3px solid #524e4e;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}

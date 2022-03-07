@@ -1,0 +1,25 @@
+button {
+  background: rgb(96, 187, 73);
+  background: radial-gradient(circle, rgb(85, 192, 62) 0%, rgba(80,159,43,1) 100%);
+  border: 2px solid #358035;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin: 10px 30px;
+}
+button:hover {
+  background-color: rgba(80,159,43,1);
+}
+button:checked {
+  background: rgb(176, 79, 61);
+  background: radial-gradient(circle, rgb(173, 76, 58) 0%, rgba(149,31,16,1) 100%);
+  border: 2px solid #700505;
+}
+buton:checked:hover {
+  background-color: rgba(149,31,16,1);
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}

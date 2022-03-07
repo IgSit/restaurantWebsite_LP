@@ -1,0 +1,40 @@
+<div class="persistence">
+  <h2>Persistence</h2>
+  <label>Select persistence type: </label>
+  <input type="radio" name="per" id="local" [checked]="authService.persistence.type == 'local'" (click)="changePersistence('local')">
+  <label for="local">Local</label>
+  <input type="radio" name="per" id="session" [checked]="authService.persistence.type == 'session'" (click)="changePersistence('session')">
+  <label for="session">Session</label>
+  <input type="radio" name="per" id="none" [checked]="authService.persistence.type == 'none'" (click)="changePersistence('none')">
+  <label for="none">None</label>
+</div>
+
+<div class="users">
+  <h1>Użytkownicy</h1>
+  <div class="user-container" *ngFor="let user of users">
+    <div class="info">
+      <p>Nick: {{user.nick}}</p>
+      <p>E-mail: {{user.email}}</p>
+    </div>
+    <div class="controls">
+      <button class="ban" (click)="handleBan(user)" [ngStyle]="{'background-color' : user.banned ? '#226bb0' : '#F83C3CFF',
+                                                  'border' : user.banned ? 'darkblue' : 'red'}">
+        <p *ngIf="user.banned">Unban</p><p *ngIf="!user.banned">Ban</p>
+      </button>
+
+      <button class="but" (click)="handleRole(user, 'customer')" [ngStyle]="{'background-color' : is(user, 'customer') ? '#4EA2F5FF': 'lightgrey',
+                                                                    'border' : is(user, 'customer') ? 'darkblue': 'grey', 'padding' : '2px 10px'}">
+        Customer
+      </button>
+      <button class="but" (click)="handleRole(user, 'manager')" [ngStyle]="{'background-color' : is(user, 'manager') ? '#4EA2F5FF': 'lightgrey',
+                                                                    'border' : is(user, 'manager') ? 'darkblue': 'grey'}">
+        Manager
+      </button>
+      <button class="but" (click)="handleRole(user, 'admin')" [ngStyle]="{'background-color' : is(user, 'admin') ? '#4EA2F5FF': 'lightgrey',
+                                                                    'border' : is(user, 'admin') ? 'darkblue': 'grey'}">
+        Admin
+      </button>
+    </div>
+
+  </div>
+</div>

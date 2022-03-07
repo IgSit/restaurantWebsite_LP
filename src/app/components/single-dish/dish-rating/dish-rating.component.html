@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="text" *ngIf="dish.rate != 0">Średnia ocena: {{dish.rate}}</div>
+  <div class="flex-container">
+    <ng-container *ngFor="let star of stars">
+      <app-star [starId]="star" [rating]="hoverState || rating" (enter)="enter($event)" (leave)="leave()"
+                (submit)="updateRating(star)" [canRate]="canRate">
+      </app-star>
+    </ng-container>
+  </div>
+</div>
+

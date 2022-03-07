@@ -1,0 +1,48 @@
+.card {
+  width: 90%;
+  flex: 1;
+  margin: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #eab946;
+  border: 4px solid grey;
+  min-width: 248px;
+  opacity: 0.95;
+  min-height: 590px;
+}
+.delButton {
+  position: relative;
+  top: -10px;
+  left: 97%;
+  background-color: #fc3939;
+  border: 2px solid #d70a0a;
+  border-radius: 400px;
+}
+.delButton:hover {
+  background-color: #c50606;
+}
+a {
+  text-decoration: none;
+  padding: 10px;
+  font-family: "Century Gothic", serif;
+  font-style: italic;
+  color: #262121;
+  background-color: #e7a13c;
+  margin-left: 10px;
+}
+.rest {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit {
+  display: flex;
+  justify-content: center;
+}
+.edit a {
+  background-color: #226bb0;
+  border: 2px solid #3232c7;
+  color: whitesmoke;
+  margin: 10px;
+  width: 60%;
+}

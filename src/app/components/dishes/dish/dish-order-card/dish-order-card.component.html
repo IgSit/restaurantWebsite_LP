@@ -1,0 +1,6 @@
+<div class="container" [ngStyle]="(inBasket >= 10) ? {'background-color' : '#1155d5'} : {'background-color' : '#e7a13c'}">
+  <button (click)="addOneToBasket()" [disabled]="inBasket == dish.maxPerDay || user.roles.includes('guest')">+</button>
+  <button (click)="removeOneFromBasket()" [disabled]="inBasket == 0">-</button>
+  <div class="counterDiv" [ngStyle]="(dish.maxPerDay - inBasket <= 3) ? {'background-color' : '#d51111'} : {'background-color' : '#e7a13c'}">
+    {{inBasket}} / {{dish.maxPerDay}}</div>
+</div>

@@ -1,0 +1,14 @@
+.star-rating-filled {
+  fill: gold;
+}
+.star-rating-blank {
+  fill: #696262;
+}
+.star-rating-submitted {
+  fill: #fae295;
+  opacity: 0.8;
+}
+.star-rating-filled, .star-rating-blank {
+  height: 45px;
+  width: 43px;
+}

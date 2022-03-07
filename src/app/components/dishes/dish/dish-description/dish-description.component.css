@@ -1,0 +1,38 @@
+h2 {
+  color: #252424;
+  font-family: Dubai, sans-serif;
+  background: rgb(244,170,10);
+  background: linear-gradient(180deg, rgba(244,170,10,1) 6%, rgba(247,224,68,1) 87%);
+  padding: 5px 10px;
+  margin-bottom: 0;
+}
+h4 {
+  margin: 0;
+  padding: 2px 30px 10px;
+  background: rgb(247,224,68);
+  background: linear-gradient(180deg, rgba(247,224,68,1) 32%, rgba(255,254,128,1) 100%);
+  font-size: 15px;
+  font-style: italic;
+}
+h5 {
+  background: rgb(254,252,95);
+  background: linear-gradient(180deg, rgba(254,252,95,1) 0%, rgba(237,163,0,1) 100%);
+  padding: 10px 30px;
+  margin: 0;
+  font-family: "Century Gothic", serif;
+  font-weight: 1;
+  font-style: revert;
+  color: #262121;
+}
+h6 {
+  margin: 0;
+  padding:  5px 30px;
+  background-color: #eda300;
+  font-size: 12px;
+  color: #262121;
+  font-style: italic;
+}
+.container{
+  min-height: 280px;
+  background-color: #EDA300FF;
+}

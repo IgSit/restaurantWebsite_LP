@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.container {
+  background-color: #efdab9;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  margin: 10px;
+  min-width: 225px;
+}
+.info {
+  width: fit-content;
+  font-family: "Century Gothic", serif;
+  font-style: italic;
+}
+app-dish-image {
+  width: 33%;
+}
+app-dish-image {
+  padding: 10px;
+}
+app-dish-order-card, .info {
+  width: fit-content;
+}
+.buy {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d5cccc;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 3px;
+}
+.buy p {
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: 400;
+  font-family: "Century Gothic", serif;
+}
+.buy button {
+  padding: 8px;
+  margin-right: 5px;
+  font-family: "Century Gothic", serif;
+  font-size: 18px;
+}
+@media (max-width: 500px) {
+  app-dish-image {
+    display: none;
+  }
+}

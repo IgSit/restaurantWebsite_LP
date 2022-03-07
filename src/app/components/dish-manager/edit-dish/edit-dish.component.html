@@ -1,0 +1,43 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+  <div class="image">
+    <app-dish-image [dish]="dish"></app-dish-image>
+  </div>
+  <p class="c">Wartości tablicowe (kategorie, kuchnie) wpisywać po przecinku bez spacji</p>
+  <div class="container">
+    <div class="column">
+      <label>Dish name:</label>
+      <p *ngIf="formErrors.get('name')"> {{formErrors.get('name')}}</p>
+      <textarea rows="1" name="name" formControlName="name" [(ngModel)]="dish.name"></textarea>
+
+      <label>Cuisine:</label>
+      <p *ngIf="formErrors.get('cuisine')"> {{formErrors.get('cuisine')}}</p>
+      <textarea rows="2" cols="20" name="cuisine" formControlName="cuisine" [(ngModel)]="dish.cuisine"></textarea>
+
+      <label>Category:</label>
+      <p *ngIf="formErrors.get('category')"> {{formErrors.get('category')}}</p>
+      <textarea rows="2" cols="20" name="category" formControlName="category" [(ngModel)]="dish.category"></textarea>
+
+      <label>Ingredients:</label>
+      <p *ngIf="formErrors.get('ingredients')"> {{formErrors.get('ingredients')}}</p>
+      <textarea rows="2" cols="20" name="ingredients" formControlName="ingredients" [(ngModel)]="dish.ingredients"></textarea>
+    </div>
+
+    <div class="column">
+      <label>Max amount per day:</label>
+      <p *ngIf="formErrors.get('maxPerDay')"> {{formErrors.get('maxPerDay')}}</p>
+      <textarea rows="1" name="maxPerDay" formControlName="maxPerDay" [(ngModel)]="dish.maxPerDay"></textarea>
+
+      <label>Price:</label>
+      <p *ngIf="formErrors.get('price')"> {{formErrors.get('price')}}</p>
+      <textarea rows="1" name="price" formControlName="price" [(ngModel)]="dish.price"></textarea>
+
+      <label>Description:</label>
+      <p *ngIf="formErrors.get('description')"> {{formErrors.get('description')}}</p>
+      <textarea rows="5" cols="20" name="description" formControlName="description" [(ngModel)]="dish.description"></textarea>
+    </div>
+  </div>
+
+  <div class="sub">
+    <button id="back" (click)="back()">Discard</button>
+    <button type="submit">Update</button></div>
+</form>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>{{dish.name | uppercase}}</h2>
+  <h4>Kuchnia {{dish.cuisine}}</h4>
+  <h5>
+    <p>{{dish.description}}</p>
+    <p>Składniki:</p>
+    <ul>
+      <li *ngFor="let ingredient of dish.ingredients">{{ingredient}}</li>
+    </ul>
+  </h5>
+  <h6 *ngIf="currencyChangerService.currency == 'dollar'">Cena: {{dish.price | currency : 'USD'}}</h6>
+  <h6 *ngIf="currencyChangerService.currency == 'euro'">Cena: {{dish.price * 4 / 3 | currency: 'EUR'}}</h6>
+
+</div>
